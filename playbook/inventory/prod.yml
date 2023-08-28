@@ -1,0 +1,21 @@
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_host: 158.160.110.154
+      ansible_ssh_user: vmaltsev
+      ansible_ssh_private_key_file: /root/.ssh/id_rsa
+
+vector:
+  hosts:
+    vector-01:
+      ansible_host: 158.160.109.226
+      ansible_ssh_user: vmaltsev
+      ansible_ssh_private_key_file: /root/.ssh/id_rsa
+
+lighthouse:
+  hosts:
+    lighthouse-01:
+      ansible_host: 158.160.98.241
+      ansible_ssh_user: vmaltsev
+      ansible_ssh_private_key_file: /root/.ssh/id_rsa

@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    server_name {{ ansible_fqdn }};
+    root {{ web_root }}/lighthouse;
+
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
+        expires 5d;
+    }
+
+    error_page 404 /404.html;
+
+    access_log /var/log/nginx/lighthouse.access.log;
+    error_log /var/log/nginx/lighthouse.error.log;
+}
